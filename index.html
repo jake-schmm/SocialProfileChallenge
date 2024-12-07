@@ -5,30 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Social links profile</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    main, .flex-card, .flex-social-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .green-heading {
+      color: hsl(75, 94%, 57%);
+      font-weight: 600;
+      margin-bottom: 5%;
+    }
+
+    .main-heading {
+      font-weight: 600;
+      margin-bottom: 3%;
+    }
+
+    .dark-background {
+      background-color: hsl(0, 0%, 8%);
+      height: 100vh
+    }
+
+    body {
+      background-color: hsl(0, 0%, 8%);
+      height: 100%;
+      color: hsl(0, 0%, 100%);
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-size: 14px;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 350px;
+      background-color: hsl(0, 0%, 12%);
+      border-radius: 5px;
+      padding: 2% 1%;
+    }
+
+    .attribution {
+      margin-top: 10px;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .social-link {
+      padding: 5% 10%;
+      background-color: hsl(0, 0%, 20%);
+      margin: 3%;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+
+    .social-links {
+      width: 80%; /* Not sure why I had to do this in a container div in addition to putting style inside <a> tag CSS style */
+    }
+
+    a {
+      color: hsl(0, 0%, 100%);
+      text-decoration: none;
+      width: 80%;
+    }
+
+    .profile-picture {
+      border-radius: 100%;
+      width: 30%;
+    }
   </style>
 </head>
 <body>
-
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="dark-background">
+    <div class="flex-card card">
+      <img 
+        class="profile-picture"
+        src="assets/images/avatar-jessica.jpeg"
+        alt="profile-picture"
+      />
+      <h1 class="main-heading">Jessica Randall</h1>
+      <span class="green-heading">London, United Kingdom</span>
+      <p style="font-weight: 300">"Front-end developer and avid reader."</p>
+    
+      <div class="flex-social-links social-links">
+        <a href="#" class="social-link">GitHub</a>
+        <a href="#" class="social-link">Frontend Mentor</a>
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Jake</a>.
+    </div>
+  </main>
 </body>
 </html>
